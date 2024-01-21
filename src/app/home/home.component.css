@@ -1,0 +1,165 @@
+*,*::before,*::after{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: 'Tw Cen MT' , sans-serif;
+}
+
+.container{
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient( rgba(0,0,0,0.1),rgba(0,0,0,0.1)) , url("/assets/fond.jpg")  center;
+  background-size: cover;
+
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  padding-top: 5%;
+}
+
+nav .logo{
+  width: 200px;
+  cursor: pointer;
+  padding-left: 2%;
+
+}
+
+nav ul{
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  padding-right: 40px;
+  text-align: right;
+  list-style-type: none;
+}
+
+ul li{
+  margin-right: 10px;
+}
+
+ul li a{
+  position: relative;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 30px;
+
+
+}
+
+ul li a::after{
+  content: '';
+  background: #ffa400;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 5px;
+  transform: translate(-50%,-5px);
+  transition: .3s;
+}
+ul li a:hover::after{
+  width: 45%;
+}
+
+.site-container{
+  position: absolute;
+  bottom: 25%;
+  color: #ffffff;
+
+}
+
+.site-container p{
+  font-size:100px;
+  font-weight: bold;
+}
+
+.site-container h1{
+  font-size: 120px;
+  line-height: 120px;
+  margin-left: -10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff ;
+  background: url("/assets/pattern.png") 0 0;
+  -webkit-background-clip: text;
+  animation: animate 5s linear 0s infinite alternate ;
+
+}
+
+@keyframes animate {
+  100%{
+    background-position: -500px 0;
+  }
+}
+
+.site-container h4{
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.site-container .row{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.row a{
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  margin-right: 40px;
+  font-size: 18px;
+  transition: 0.3ms;
+}
+
+.social-icons a img{
+  height: 30px;
+}
+
+.row a {
+  font-weight: bold;
+}
+
+.row a:hover{
+  background-color: #ffa400;
+  color: #ffffff;
+}
+
+.row a span{
+  font-size: 15px;
+  font-weight: bold;
+  line-height:2px ;
+  margin-left: 10px;
+}
+
+.row span{
+  font-size: 18px;
+}
+
+
+.social-icons{
+  position: absolute;
+  right: 3%;
+  bottom: 1%;
+}
+
+.social-icons a {
+  padding: 5px;
+  margin-right:5px ;
+}
+
+span{
+  font-size: medium;
+  font-weight: bold;
+}

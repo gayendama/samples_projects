@@ -1,0 +1,42 @@
+
+<div class="container">
+
+  <nav>
+    <img src="assets/logo.jpg" class="logo" style="height: 100px;width: 25%" alt="">
+    <ul>
+      <li><a routerLink="/"> Accueil</a></li>
+      <li><a > Block</a></li>
+      <li><a routerLink="/file"> File</a></li>
+      <li><a routerLink="/objet"> Objet</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="formulaire">
+    <div class="wrapper">
+      <form  (ngSubmit)="createBlock()" >
+        <h1 style="color: #ffffff">Creation de cluster de type Block</h1>
+        <div class="input-box">
+          <input type="text" [(ngModel)]="type"  name="type" placeholder="Type" required  >
+          <!--<span *ngIf="errors.type" class="text-danger"> {{errors.type}}</span>-->
+        </div>
+        <div class="input-box">
+          <input type="number"  [(ngModel)]="size" name="size" placeholder="Size" required >
+         <!-- <span *ngIf="errors.size" class="text-danger"> {{errors.size}}</span> -->
+        </div>
+        <button type="submit" class="btn">Creer</button>
+      </form>
+    </div>
+
+  </div>
+
+
+
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/company/beopenit/"> <img  src="assets/linkedin.png" alt="linkedin"> </a>
+    <a href="https://twitter.com/beopenit"> <img src="assets/twitter.png" alt="twitter"> </a>
+  </div>
+
+</div>
+
+
